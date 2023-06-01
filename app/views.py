@@ -6,6 +6,9 @@ from app.forms import *
 from app.models import *
 
 
+def home(request):
+    return render(request,'home.html')
+
 def registration(request):
     ufo=UserForm()
     pfo=ProfileForm()
