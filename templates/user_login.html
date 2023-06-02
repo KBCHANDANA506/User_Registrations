@@ -1,0 +1,29 @@
+{% extends 'dummy.html' %}
+{% block title %}
+   <title><h1>User_Login</h1></title>
+{% endblock %}
+{% block body_block %}
+    <center>
+      <h1>User_Login</h1>
+    
+      <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username"><br>
+
+        <label for="password">PassWord</label>
+
+        <input type="text" name="password" id="password"><br>
+
+        <input type="submit" value="User_login" class="btn btn-primary">
+
+
+      </form>
+       
+
+    </center>
+
+
+
+
+{% endblock %}

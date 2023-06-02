@@ -14,9 +14,20 @@
 </head>
   <body>
     <center>
+        <nav class="nav" style="background-color:aqua;">
         <a href="{% url 'admin:index' %}" class="nav-link">Admin Page</a>
         <a href="{% url 'registration' %}" class="nav-link">Registration Page</a>
         <a href="{% url 'home' %}" class="nav-link">Home Page</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'user_logout'%}"class=nav-link>Log_Out</a>
+        {% else %}
+        <a href="{% url 'user_login' %}"class="nav-link">User_Login</a>
+        {% endif%}
+        
+        </nav>
+
+
+
     </center>
        
         
